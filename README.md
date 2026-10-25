@@ -3,9 +3,9 @@
 
 #### ELEC70142 Digital VLSI Design
 
-### Lab 5 – Scan Chain Insertion, ATPG and Logic Equivalence Check
+### Lab 4 – Scan Chain Insertion, ATPG and Logic Equivalence Check
 
-##### *Peter Cheung, v2.0 – 4 September 2026*
+##### *Peter Cheung, v2.1 – 12 October 2026*
 
 ---
 
