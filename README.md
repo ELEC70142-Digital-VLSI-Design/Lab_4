@@ -5,7 +5,7 @@
 
 ### Lab 4 – Scan Chain Insertion, ATPG and Logic Equivalence Check
 
-##### *Peter Cheung, v2.1 – 12 November 2026*
+##### *Peter Cheung, v2.2 – 192 November 2026*
 
 ---
 
@@ -228,3 +228,18 @@ Failing (not equivalent)       0       0       0       0       0       0       0
 ```
 
 >Now, introduce an error in the structural Verilog netlist and repeat the LEC. You will observe that the check does not pass.
+
+Additional notes:
+* You can check DFT DRCs for missing signals or wrong constraints, works for both pre (check spec) and post (check scan) insertion with:
+```bash
+dft_drc
+```
+* Synopssy can report a Test Coverage estimate of the inserted chain with:
+```
+dft_drc -coverage_estimate
+```
+ 
+* If desired you can make the report more verbose by setting the configuration beforehand with:
+```
+set_dft_drc_configuration -enhanced_dft_drc_report enable
+```
