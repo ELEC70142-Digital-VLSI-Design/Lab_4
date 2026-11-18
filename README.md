@@ -210,7 +210,7 @@ The script compares `src/FIFO.sv` (the **reference**, `r:`) with `outputs/FIFO_d
 
   The scan netlist does **more** than the RTL: with `scan_en = 1` it becomes a shift   register. It is only equivalent to the RTL in functional mode. LEC therefore proves   equivalence *under the stated constraints*, not unconditionally.
 
-A successful run ends with:
+A successful run ends with (error FM-006 occurs because the script tries to report errors - which in this case are not there):
 
 ```
 ********************************* Verification Results *********************************
@@ -226,7 +226,6 @@ Passing (equivalent)           0       0       0       0      34     525       0
 Failing (not equivalent)       0       0       0       0       0       0       0       0
 ****************************************************************************************
 ```
-
 > **Q7.** Account for the 525 DFF and 34 Port compare points. Which output ports make up the 34? `scan_do` is an output of the implementation. Why is it not among the compare points? (Look at `reports/lec_unmatched.rpt`.)
 
 ##### Exercise A – Break the netlist

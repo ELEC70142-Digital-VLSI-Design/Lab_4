@@ -35,8 +35,8 @@ set_app_var verification_failing_point_limit 0
 ## Libraries
 ####################################################################
 
-set lib_base [file tail [file dirname $STD_DB_DIR]]
-set LIB_DB   $STD_DB_DIR/${lib_base}tc.db
+# Only cell function matters for LEC, so any corner will do; tc is used.
+set LIB_DB $STD_DB_DIR/$env(TSMC65_STDCELL)tc_ccs.db
 
 if { ![file exists $LIB_DB] } {
     error "No library at $LIB_DB. Check STD_DB_DIR in the kit."
